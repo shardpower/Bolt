@@ -4,11 +4,11 @@
   </b>
 </h1>
 <p>
-  Night uses <a href="https://github.com/titaniumnetwork-dev/Ultraviolet">Ultraviolet</a>, a proxy backend provided from Titanium Network. Ultraviolet v3 is a hyperfast proxy service that beats out every other service. However, Ultraviolet's sucessor, <a href="https://github.com/MercuryWorkshop/scramjet">Scramjet</a>, is in the works. Once Scramjet is ready for production, Night will use both Ultraviolet and Scramjet to optimize performance and speed.
+  Bolt uses <a href="https://github.com/titaniumnetwork-dev/Ultraviolet">Ultraviolet</a>, a proxy backend provided from Titanium Network. Ultraviolet v3 is a hyperfast proxy service that beats out every other service. However, Ultraviolet's sucessor, <a href="https://github.com/MercuryWorkshop/scramjet">Scramjet</a>, is in the works. Once Scramjet is ready for production, Bolt will use both Ultraviolet and Scramjet to optimize performance and speed.
 </p>
 <h1>
   <b>
-    Why Night is Better than other Proxies
+    Why Bolt is Better than other Proxies
   </b>
 </h1>
 <p>
@@ -20,7 +20,7 @@
   </b>
 </h1>
 <p>
-  Because Night is so powerful, it supports many popular sites. Some sites that it support are:
+  Because Bolt is so powerful, it supports many popular sites. Some sites that it support are:
 
   -<b>GeForce NOW</b><br>
   -<b>Now.gg</b><br>
@@ -34,7 +34,7 @@
   </b>
 </h1>
 <p>
-  To use Night, you must deploy it. You <b><i>CANNOT</i></b> deploy to services such as <br><br>
+  To use Bolt, you must deploy it. You <b><i>CANNOT</i></b> deploy to services such as <br><br>
   -Vercel<br>
   -Netlify<br>
   -Github Pages<br>
