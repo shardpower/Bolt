@@ -28,3 +28,23 @@
   -<b>TikTok</b><br>
   -<b>Snapchat</b><br>
 </p>
+<h1>
+  <b>
+    Usage
+  </b>
+</h1>
+<p>
+  To use Night, you must deploy it. You <b><i>CANNOT</i></b> deploy to services such as <br><br>
+  -Vercel<br>
+  -Netlify<br>
+  -Github Pages<br>
+  -StackBlitz<br><br>
+  because they either do not support Wisp, service workers, or are static.<br>
+
+  You CAN deploy to:<br><br>
+  -Codeanywhere<br>
+  -Gitpod<br>
+  -Koyeb<br>
+  -CodeSandbox<br>
+  -Github Codespaces<br>
+</p>
