@@ -42,9 +42,11 @@
   because they either do not support Wisp, service workers, or are static.<br>
 
   You CAN deploy to:<br><br>
+  -Render<br>
   -Codeanywhere<br>
   -Gitpod<br>
   -Koyeb<br>
   -CodeSandbox<br>
   -Github Codespaces<br>
+  -Railway<br>
 </p>
