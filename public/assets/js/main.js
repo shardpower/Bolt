@@ -56,7 +56,7 @@ function Main() {
         url = __uv$config.encodeUrl(url);
 
         localStorage.setItem("url", url);
-
+        localStorage.setItem("loaded", false);
         window.location.href = "/browser.html";
     });
 }

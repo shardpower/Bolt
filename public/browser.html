@@ -27,6 +27,10 @@
     </iframe>
 
     <script>
+        if (localStorage.getItem("loaded") == false) {
+            localStorage.setItem("loaded", true);
+            location.reload();
+        }
         document.getElementById("uvFrame").setAttribute("src", "/uv/service/" + localStorage.getItem("url"));
     </script>
 </body>
