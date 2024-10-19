@@ -24,6 +24,7 @@
 
   -<b>GeForce NOW</b><br>
   -<b>Now.gg</b><br>
+  -<b>Discord</b><br>
   -<b>Youtube</b><br>
   -<b>TikTok</b><br>
 </p>
