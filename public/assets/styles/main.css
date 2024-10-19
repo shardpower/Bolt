@@ -26,10 +26,12 @@ body {
 }
 
 .title {
-    color: var(--font);
+    color: rgb(0, 149, 255);
     margin: auto;
     text-align: center;
     font-size: 70px;
+    text-shadow: 0 0 50px rgb(0, 162, 255);
+    height: 200px;
 }
 
 #input {
@@ -49,6 +51,10 @@ body {
     margin-inline: auto;
 }
 
+#input:focus {
+    box-shadow: 0 0 50px rgb(0, 162, 255);
+}
+
 #uvFrame {
     position: absolute;
     top: 0;
@@ -64,10 +70,12 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -10000;
+    text-shadow: 0 0 40px rgb(0, 153, 255);
+
 }
 
 #loading {
-    color: var(--font);
+    color: rgb(0, 153, 255);
     font-size: 100px;
     z-index: -10000;
 }
