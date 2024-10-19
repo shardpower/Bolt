@@ -34,6 +34,7 @@
   </b>
 </h1>
 <p>
+  [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?name=bolt&type=git&repository=EnchantedDonutStudioz%2FBolt&branch=main&builder=buildpack&env%5B%5D=&ports=8080%3Bhttp%3B%2F)
   To use Bolt, you must deploy it. You <b><i>CANNOT</i></b> deploy to services such as <br><br>
   -Vercel<br>
   -Netlify<br>
