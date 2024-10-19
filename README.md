@@ -26,7 +26,6 @@
   -<b>Now.gg</b><br>
   -<b>Youtube</b><br>
   -<b>TikTok</b><br>
-  -<b>Snapchat</b><br>
 </p>
 <h1>
   <b>
