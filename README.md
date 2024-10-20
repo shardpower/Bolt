@@ -50,3 +50,15 @@
   -Github Codespaces<br>
   -Railway<br>
 </p>
+<h1>
+  <b>
+    Local Usage
+  </b>
+</h1>
+<p>
+  This is a Node JS application with npm packages. You must first run:<br>
+  <b>npm i</b><br>
+  then run
+  <br><b>npm start</b><br>
+  You should have a local Bolt on <b>localhost:8080</b>!
+</p>
