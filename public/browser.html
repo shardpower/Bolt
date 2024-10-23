@@ -6,11 +6,13 @@
     <title>Home</title>
     <link rel="icon" type="image/x-icon" href="https://ssl.gstatic.com/classroom/favicon.png" />
     <link rel="stylesheet" href="/assets/styles/main.css" />
-    <script src="/baremux/index.js"></script>
-    <script src="/epoxy/index.js"></script>
+
     <script src="/uv/uv.bundle.js"></script>
     <script src="/uv/uv.config.js"></script>
     <script src="/sw.js"></script>
+    <script src="/baremux/index.js"></script>
+    <script src="/epoxy/index.js"></script>
+    <script src="/assets/js/initate.js"></script>
     <script src="/assets/js/main.js"></script>
 </head>
 
@@ -20,6 +22,20 @@
     <script type="text/javascript" src="/assets/particles/app.js"></script>
     <div class="loading">
         <h1 id="loading">LOADING</h1>
+    </div>
+    <div class="bar">
+        <a href="/index.html" id="logo">B</a>
+        <div class="tabs">
+
+            <div id="firsttab">
+                <h1 id="ftabtxt"></h1>
+            </div>
+        </div>
+        <div class="controls">
+            <div id="newTabButton">
+                <h1 id="newTab">+</h1>
+            </div>
+        </div>
     </div>
 
     <iframe src="" frameborder="0" id="uvFrame">
@@ -33,6 +49,70 @@
         }
         document.getElementById("uvFrame").setAttribute("src", "/uv/service/" + localStorage.getItem("url"));
     </script>
+
+    <script>
+        var selectedTab = 0;
+        function newTab() {
+            var tab = document.createElement("div");
+            var tabText = document.createElement("h1");
+            var xButton = document.createElement("h1");
+            xButton.id = "x";
+            xButton.textContent = "x";
+            tab.id = "tab";
+            tabText.id = "tabTxt";
+            xButton.addEventListener("click", function () {
+                tab.remove();
+                updateTabs();
+            });
+            tab.appendChild(tabText);
+            tab.appendChild(xButton);
+            tab.addEventListener("click", function () {
+                // Remove active class from all tabs
+                document.querySelectorAll("#tab, #firsttab").forEach(t => t.classList.remove("active"));
+
+                Array.from(document.getElementsByClassName("tabs")[0].children).forEach(function (tab) {
+                    tab.classList.remove("active");
+                });
+                tab.classList.add("active");
+
+                selectedTab = Array.from(document.getElementsByClassName("tabs")[0].children).indexOf(tab);
+
+                localStorage.setItem("tab" + selectedTab + "url", document.getElementById("uvFrame").getAttribute("src"));
+                document.getElementById("uvFrame").setAttribute("src", localStorage.getItem("tab" + selectedTab + "url"));
+                localStorage.setItem("tab" + selectedTab + "url", document.getElementById("uvFrame").getAttribute("src"));
+            });
+            document.getElementsByClassName("tabs")[0].appendChild(tab);
+            updateTabs();
+        }
+
+        document.getElementById("newTabButton").addEventListener("click", newTab);
+
+        document.getElementById("firsttab").addEventListener("click", function () {
+            selectedTab = 0;
+            Array.from(document.getElementsByClassName("tabs")[0].children).forEach(function (tab) {
+                tab.classList.remove("active");
+            });
+            document.getElementById("firsttab").classList.add("active");
+        });
+
+        if (selectedTab === 0) {
+            Array.from(document.getElementsByClassName("tabs")[0].children).forEach(function (tab) {
+                tab.classList.remove("active");
+            });
+            document.getElementById("firsttab").classList.add("active");
+        }
+
+        function updateTabs() {
+            Array.from(document.getElementsByClassName("tabs")[0].children).forEach(function (tab) {
+                localStorage.setItem("tab" + Array.from(document.getElementsByClassName("tabs")[0].children).indexOf(tab) + "url", "/uv/service/" + "hvtrs8%2F-wuw%2Cgmoelg.aoo%2F");
+
+            });
+        }
+        updateTabs();
+
+    </script>
+
+    <script src="/assets/js/tabs.js"></script>
 </body>
 
 </html>

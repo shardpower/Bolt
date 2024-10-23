@@ -57,10 +57,10 @@ body {
 
 #uvFrame {
     position: absolute;
-    top: 0;
+    top: 59px;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 91.5vh;
     border-radius: 0;
 }
 
@@ -103,4 +103,159 @@ body {
     text-shadow: 0 0 70px rgb(255, 255, 255);
     box-shadow: 0 0 50px rgb(255, 255, 255);
     color: white;
+}
+
+.bar {
+    background-color: #262626;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55px;
+}
+
+#logo {
+    color: rgb(0, 162, 255);
+    font-size: 35px;
+    text-shadow: 0 0 10px rgb(0, 153, 255);
+    margin-top: 0px;
+    margin-left: 5px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.controls {
+    background-color: #000000;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 19px;
+}
+
+#firsttab {
+    background-color: #000000;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    width: 200px;
+    height: 40px;
+    top: 10px;
+    left: 40px;
+    border-radius: 8px;
+}
+
+#ftabtxt {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-top: 3px;
+    text-overflow: ellipsis;
+}
+
+#tab {
+    display: flex;
+    background-color: #000000;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    top: 10px;
+    border-radius: 8px;
+    margin-right: 5px;
+}
+
+#tabTxt {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-top: 3px;
+    text-overflow: ellipsis;
+}
+
+
+#logo:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+#newTabButton {
+    background-color: #000000;
+    margin-top: -35px;
+    margin-left: 193vh;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0, 153, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+#newTab {
+    font-size: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+    line-height: 1;
+    margin-top: 17px;
+}
+
+#newTabButton:hover {
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    left: 245px;
+    overflow-x: auto;
+    max-width: calc(100% - 80px);
+    /* Adjust as needed */
+}
+
+#x {
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+    margin-top: -5px;
+    margin-left: 160px;
+    transition: all 0.1s ease-in-out;
+}
+
+#x:hover {
+    color: #0099ff;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+#tab.active {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#tab.active #tabTxt {
+    color: #000000;
+}
+
+#tab.active #x {
+    color: #000000;
+}
+
+#firsttab.active {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#firsttab.active #ftabtxt {
+    color: #000000;
 }
