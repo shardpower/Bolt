@@ -81,6 +81,7 @@
                 document.getElementById("uvFrame").setAttribute("src", localStorage.getItem("tab" + selectedTab + "url"));
                 localStorage.setItem("tab" + selectedTab + "url", document.getElementById("uvFrame").getAttribute("src"));
             });
+            tabText.textContent = "New Tab";
             document.getElementsByClassName("tabs")[0].appendChild(tab);
             updateTabs();
         }
