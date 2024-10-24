@@ -223,6 +223,7 @@ body {
 }
 
 #x {
+    position: absolute;
     font-size: 20px;
     color: #ffffff;
     text-decoration: none;
