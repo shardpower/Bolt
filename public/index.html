@@ -6,11 +6,9 @@
   <title>Home</title>
   <link rel="icon" type="image/x-icon" href="https://ssl.gstatic.com/classroom/favicon.png" />
   <link rel="stylesheet" href="/assets/styles/main.css" />
-  <script src="/baremux/index.js"></script>
-  <script src="/epoxy/index.js"></script>
-  <script src="/uv/uv.bundle.js"></script>
-  <script src="/uv/uv.config.js"></script>
-  <script src="/sw.js"></script>
+
+  <script src="/chemical.js"></script>
+  <script src="/chemical.components.js"></script>
 </head>
 
 <body>
@@ -27,9 +25,6 @@
   <div id="extras">
     <h1 class="etext" id="discord">Join the Discord Server!</h1>
   </div>
-
-  <script src="/assets/js/main.js"></script>
-
   <script>
     document.getElementById("extras").addEventListener("mouseover", function () {
       document.getElementById("discord").textContent = "https://discord.gg/68DEPPKtw6";
@@ -38,6 +33,8 @@
       document.getElementById("discord").textContent = "Join the Discord Server!";
     });
   </script>
+  <script src="/assets/js/main.js"></script>
+
 </body>
 
 </html>

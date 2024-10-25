@@ -1,25 +1,17 @@
 {
-  "name": "night",
-  "version": "1.0.0",
-  "type": "module",
-  "engines": {
-    "npm": ">=10.0.0",
-    "node": ">=20.0.0"
-  },
+  "name": "boltunblocker",
+  "version": "1.5.0",
+  "description": "One of the fastest and feature-packed web proxies ever!",
+  "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
-  "author": "Donut Dev",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "type": "module",
+  "license": "ISC",
   "dependencies": {
-    "@mercuryworkshop/bare-mux": "^2.0.5",
-    "@mercuryworkshop/epoxy-transport": "^2.1.9",
-    "@titaniumnetwork-dev/ultraviolet": "^3.2.7",
-    "express": "^4.18.2",
-    "wisp-server-node": "^1.1.3",
-    "ws": "^8.17.1"
-  },
-  "devDependencies": {
-    "eslint": "^8.36.0"
+    "chemicaljs": "^2.1.1"
   }
 }
