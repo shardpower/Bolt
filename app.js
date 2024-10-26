@@ -4,6 +4,7 @@ import express from "express";
 const [app, listen] = new ChemicalServer();
 const port = process.env.PORT || 8080;
 
+
 app.use(express.static("public", {
     index: "index.html",
     extensions: ["html"]
@@ -19,3 +20,4 @@ app.use((req, res) => {
 listen(port, () => {
     console.log(`Bolt listening on port ${port}`);
 });
+

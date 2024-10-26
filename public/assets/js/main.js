@@ -3,10 +3,18 @@ const input = document.getElementById("input");
 
 var urlToEncode;
 
+async function init() {
+
+    await chemical.setTransport(localStorage.getItem("transport") || "epoxy");
+}
+window.addEventListener("chemicalLoaded", function (e) {
+    init();
+});
+
 async function encodeUrl() {
-    await chemical.setTransport("epoxy");
+
     var url = await chemical.encode(urlToEncode, {
-        service: localStorage.getItem("proxy"),
+        service: localStorage.getItem("proxy") || "uv",
         autoHttps: true,
         searchEngine: "https://www.google.com/search?q=%s"
     })
