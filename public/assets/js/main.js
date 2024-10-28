@@ -4,7 +4,6 @@ const input = document.getElementById("input");
 var urlToEncode;
 
 async function init() {
-
     await chemical.setTransport(localStorage.getItem("transport") || "epoxy");
 }
 window.addEventListener("chemicalLoaded", function (e) {
