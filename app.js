@@ -1,5 +1,6 @@
 import { ChemicalServer } from "chemicaljs";
 import express from "express";
+import cors from "cors";
 
 const [app, listen] = new ChemicalServer();
 const port = process.env.PORT || 8080;
@@ -8,6 +9,12 @@ const port = process.env.PORT || 8080;
 app.use(express.static("public", {
     index: "index.html",
     extensions: ["html"]
+}));
+
+app.use(cors({
+    origin: '*',
+    methods: 'GET',
+    allowedHeaders: 'Content-Type',
 }));
 
 app.serveChemical();
