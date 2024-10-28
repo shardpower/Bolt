@@ -17,6 +17,12 @@ app.use(cors({
     allowedHeaders: 'Content-Type',
 }));
 
+app.on("request", (req, res) => {
+    res.setHeader("Cross-Origin-Opener-Policy", "anonymous");
+    res.setHeader("Cross-Origin-Embedder-Policy", "anonymous");
+    app(req, res);
+});
+
 app.serveChemical();
 
 app.use((req, res) => {
