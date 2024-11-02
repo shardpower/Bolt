@@ -13,15 +13,24 @@ fetch('/assets/json/games.json')
       `;
 
             gameElement.addEventListener('click', async () => {
-                var ute = await chemical.encode(game.url, {
-                    service: localStorage.getItem("proxy") || "uv",
-                    autoHttps: true,
-                    searchEngine: "https://www.google.com/search?q=%s"
-                })
-                localStorage.setItem('url', ute);
-                window.location.href = '/browser.html';
+                var ute = game.url;
+                if (localStorage.getItem("proxy") == "uv") {
+                    ute = __uv$config.prefix + __uv$config.encodeUrl(ute);
+                    localStorage.setItem('url', ute);
+                    window.location.href = '/browser.html';
+                }
+                else if (localStorage.getItem("proxy") == "rammerhead") {
+                    rhEncode();
+                }
+
+                async function rhEncode() {
+                    ute = await RammerheadEncode(ute);
+                    window.location.href = "/" + ute;
+                }
             });
 
             appsContainer.appendChild(gameElement);
         });
     });
+
+
