@@ -46,10 +46,13 @@ server.on("request", (req, res) => {
 
 server.on("upgrade", (req, socket, head) => {
     if (req.url.endsWith("/wisp/")) {
-        wisp.routeRequest(req, socket, head);
+        wisp.routeRequest(req, socket, head)
+    }
+    else if (rammerhead.shouldRouteRh(req)) {
+        rammerhead.routeRhUpgrade(rh, req, socket, head)
     }
     else {
-        socket.end();
+        socket.end()
     }
 });
 
