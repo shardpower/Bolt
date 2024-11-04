@@ -65,3 +65,6 @@ if (form && input) {
 
 }
 
+document.addEventListener("keydown", function () {
+    alert(self.$meteor.util.formatUrl("https://google.com"));
+});

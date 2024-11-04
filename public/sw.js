@@ -21,4 +21,12 @@ async function registerSW() {
     }
 
     await navigator.serviceWorker.register(stockSW);
+    const registration = await navigator.serviceWorker.register('/meteorsw.js')
+    let connection = new BareMux.BareMuxConnection("/baremux/worker.js")
+    await connection.setTransport(
+        "/epoxy/index.mjs", // replace with your transport
+        [{
+            wisp: (location.protocol === "https:" ? "wss" : "ws") + "://" + location.host + "/wisp/",
+        }]
+    )
 }
