@@ -478,7 +478,7 @@ body {
     background-color: var(--secondary);
 }
 
-#transport-select {
+#wisp-select {
     width: 200px;
     height: 75px;
     border-radius: 20px;
