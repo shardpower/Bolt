@@ -31,6 +31,10 @@ if (form && input) {
 
         event.preventDefault();
 
+        if (!localStorage.getItem("proxy")) {
+            localStorage.setItem("proxy", "uv");
+        }
+
         try {
             await registerSW();
 
