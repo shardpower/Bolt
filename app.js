@@ -25,7 +25,7 @@ app.use("/meteor/", express.static(meteorPath));
 const server = createServer();
 const rh = createRammerhead({
     logLevel: 'debug', //Options are: disabled, debug, traffic, info, warn, error (default: debug)
-    reverseProxy: true, //whether or not this server is running behind a reverse proxy (default: false)
+    reverseProxy: false, //whether or not this server is running behind a reverse proxy (default: false)
     disableLocalStorageSync: false, //disable localstorage sync (not recommended) (default: false)
     disableHttp2: false //disable http2 usage (default: false) (NOT RECOMMENDED)
 });
