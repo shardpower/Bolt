@@ -1,6 +1,8 @@
 var proxySelect = document.getElementById("proxy-select");
 var wispSelect = document.getElementById("wisp-select");
 var ab = document.getElementById("ab");
+var blooket = document.getElementById("blooket");
+var gimkit = document.getElementById("gimkit");
 
 if (proxySelect) {
   proxySelect.value = localStorage.getItem("proxy") || "uv";
@@ -52,5 +54,31 @@ if (ab) {
   </html>
 `);
     window.location.href = "https://classroom.google.com/u/";
+  });
+}
+
+if (blooket) {
+  blooket.addEventListener("click", async function () {
+    try {
+      const response = await fetch('/assets/cheats/blooket.txt');
+      const text = await response.text();
+      await navigator.clipboard.writeText(text);
+      alert("Copied to clipboard!");
+    } catch (err) {
+      alert("Failed to copy cheats");
+    }
+  });
+}
+
+if (gimkit) {
+  gimkit.addEventListener("click", async function () {
+    try {
+      const response = await fetch('/assets/cheats/gimkit.txt');
+      const text = await response.text();
+      await navigator.clipboard.writeText(text);
+      alert("Copied to clipboard!");
+    } catch (err) {
+      alert("Failed to copy cheats");
+    }
   });
 }
