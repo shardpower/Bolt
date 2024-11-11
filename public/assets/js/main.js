@@ -2,6 +2,8 @@ var form = document.getElementById("form");
 var input = document.getElementById("input");
 
 
+
+
 async function init() {
     try {
         const connection = new BareMux.BareMuxConnection("/baremux/worker.js")
@@ -14,6 +16,20 @@ async function init() {
             await connection.setTransport("/epoxy/index.mjs", [{ wisp: wispUrl }]);
             console.log("Using websocket transport " + "wisp url is: " + wispUrl);
         }
+        const scramjet = new ScramjetController({
+            prefix: "/scram/service/",
+            files: {
+                wasm: "/scram/scramjet.wasm.js",
+                worker: "/scram/scramjet.worker.js",
+                client: "/scram/scramjet.client.js",
+                shared: "/scram/scramjet.shared.js",
+                sync: "/scram/scramjet.sync.js"
+            },
+        });
+        window.sj = scramjet;
+        scramjet.init("../sjsw.js");
+
+
     } catch (error) {
         console.error("Error setting up BareMux transport:", error);
     }
@@ -22,6 +38,8 @@ init();
 
 if (form && input) {
     form.addEventListener("submit", async (event) => {
+
+
         function isUrl(val = "") {
             if (
                 /^http(s?):\/\//.test(val) ||
@@ -55,19 +73,31 @@ if (form && input) {
         }
 
         if (localStorage.getItem("proxy") == "uv") {
-            url = __uv$config.prefix + __uv$config.encodeUrl(url);
-            localStorage.setItem("url", url);
-            window.location.href = "/browser.html";
+            uvEncode();
+        }
+        else if (localStorage.getItem("proxy") == "sj") {
+            sjEncode();
         }
         else if (localStorage.getItem("proxy") == "rammerhead") {
             rhEncode();
-
         }
+
+
         async function rhEncode() {
             url = await RammerheadEncode(url);
             window.location.href = "/" + url;
         }
-
+        async function uvEncode() {
+            url = __uv$config.prefix + __uv$config.encodeUrl(url);
+            localStorage.setItem("url", url);
+            window.location.href = "/browser.html";
+        }
+        async function sjEncode() {
+            url = "/scram/service/" + encodeURIComponent(url);
+            localStorage.setItem("url", url);
+            window.location.href = "/browser.html";
+        }
     });
 
 }
+

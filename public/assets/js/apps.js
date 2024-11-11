@@ -19,6 +19,9 @@ fetch('/assets/json/apps.json')
                     localStorage.setItem('url', ute);
                     window.location.href = '/browser.html';
                 }
+                else if (localStorage.getItem("proxy") == "sj") {
+                    sjEncode();
+                }
                 else if (localStorage.getItem("proxy") == "rammerhead") {
                     rhEncode();
                 }
@@ -27,6 +30,11 @@ fetch('/assets/json/apps.json')
                 async function rhEncode() {
                     ute = await RammerheadEncode(ute);
                     window.location.href = "/" + ute;
+                }
+                async function sjEncode() {
+                    url = "/scram/service/" + encodeURIComponent(ute);
+                    localStorage.setItem("url", url);
+                    window.location.href = "/browser.html";
                 }
             });
 
