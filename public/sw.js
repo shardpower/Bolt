@@ -22,7 +22,4 @@ async function registerSW() {
 
     await navigator.serviceWorker.register(stockSW);
 
-
-
-
 }
