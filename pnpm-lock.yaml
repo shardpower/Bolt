@@ -27,10 +27,10 @@ importers:
         specifier: ^3.2.10
         version: 3.2.10
       express:
-        specifier: ^4.18.2
+        specifier: ^4.21.1
         version: 4.21.1
       meteorproxy:
-        specifier: ^1.0.6-patch.1
+        specifier: 1.0.6-patch.1
         version: 1.0.6-patch.1(utf-8-validate@6.0.5)
       wisp-server-node:
         specifier: ^1.1.7
@@ -40,7 +40,7 @@ importers:
         version: 8.18.0(bufferutil@4.0.8)(utf-8-validate@6.0.5)
     devDependencies:
       eslint:
-        specifier: ^8.36.0
+        specifier: ^8.57.1
         version: 8.57.1
 
 packages:
