@@ -4,7 +4,9 @@
   </b>
 </h1>
 <p>
-  Bolt uses <a href="https://github.com/titaniumnetwork-dev/Ultraviolet">Ultraviolet</a>, a proxy backend provided from Titanium Network. Ultraviolet v3 is a hyperfast proxy service that beats out every other service. However, Ultraviolet's sucessor, <a href="https://github.com/MercuryWorkshop/scramjet">Scramjet</a>, is in the works. Once Scramjet is ready for production, Bolt will use both Ultraviolet and Scramjet to optimize performance and speed.
+  Bolt uses <a href="https://github.com/titaniumnetwork-dev/Ultraviolet">Ultraviolet</a>, a proxy backend provided from Titanium Network. Ultraviolet v3 is a fast proxy service, but it's sucessor, <a href="https://github.com/MercuryWorkshop/scramjet">Scramjet</a>, is in the works. Bolt also uses Scramjet, but will default to Ultraviolet because Scramjet is not ready for production yet.
+  
+  Bolt also uses <a href="https://github.com/binary-person/rammerhead">Rammerhead</a>,  a proxy service that is balanced between speed and site support.
 </p>
 <h1>
   <b>
@@ -22,11 +24,11 @@
 <p>
   Because Bolt is so powerful, it supports many popular sites. Some sites that it support are:
 
-  -<b>GeForce NOW</b><br>
-  -<b>Now.gg</b><br>
-  -<b>Discord</b><br>
-  -<b>Youtube</b><br>
-  -<b>TikTok</b><br>
+  - <b>GeForce NOW</b><br>
+  - <b>Now.gg</b><br>
+  - <b>Discord</b><br>
+  - <b>Youtube</b><br>
+  - <b>TikTok</b><br>
 </p>
 <h1>
   <b>
@@ -34,21 +36,23 @@
   </b>
 </h1>
 <p>
-  To use Bolt, you must deploy it. You <b><i>CANNOT</i></b> deploy to services such as <br><br>
-  -Vercel<br>
-  -Netlify<br>
-  -Github Pages<br>
-  -StackBlitz<br><br>
+  To use Bolt, you must deploy it. You <b><i>CANNOT</i></b> deploy to services such as:
+  
+  - <b>Vercel</b><br>
+  - <b>Netlify</b><br>
+  - <b>Github Pages</b><br>
+  - <b>Cloudflare Pages</b><br>
+
   because they either do not support Wisp, service workers, or are static.<br>
 
-  You CAN deploy to:<br><br>
-  -Render<br>
-  -Codeanywhere<br>
-  -Gitpod<br>
-  -Koyeb<br>
-  -CodeSandbox<br>
-  -Github Codespaces<br>
-  -Railway<br>
+  You CAN deploy to:<br><br> <b>
+  - Render<br>
+  - Codeanywhere<br>
+  - Gitpod<br>
+  - Koyeb<br>
+  - CodeSandbox<br>
+  - Github Codespaces<br>
+  - Railway<br></b>
 </p>
 <h1>
   <b>
@@ -56,9 +60,17 @@
   </b>
 </h1>
 <p>
-  This is a Node JS application with npm packages. You must first run:<br>
-  <b>npm i</b><br>
+  This is a Node JS application with npm packages. You must first run:
+  
+  ```bash
+  npm i
+  ```
+  <br>
   then run
-  <br><b>npm start</b><br>
+  
+  ```bash
+  npm start
+  ```
+  
   You should have a local Bolt on <b>localhost:8080</b>!
 </p>

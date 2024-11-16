@@ -32,8 +32,8 @@ fetch('/assets/json/apps.json')
                     window.location.href = "/" + ute;
                 }
                 async function sjEncode() {
-                    url = "/scram/service/" + encodeURIComponent(ute);
-                    localStorage.setItem("url", url);
+                    ute = "/scram/service/" + encodeURIComponent(ute);
+                    localStorage.setItem("url", ute);
                     window.location.href = "/browser.html";
                 }
             });

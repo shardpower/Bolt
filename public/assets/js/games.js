@@ -31,7 +31,7 @@ fetch('/assets/json/games.json')
                     window.location.href = "/" + ute;
                 }
                 async function sjEncode() {
-                    url = "/scram/service/" + encodeURIComponent(ute);
+                    ute = "/scram/service/" + encodeURIComponent(ute);
                     localStorage.setItem("url", ute);
                     window.location.href = "/browser.html";
                 }

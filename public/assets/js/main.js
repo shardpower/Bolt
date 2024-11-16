@@ -25,7 +25,7 @@ async function init() {
             },
         });
         window.sj = scramjet;
-        scramjet.init("../sjsw.js");
+        scramjet.init("/scram/scramjet.sw.js");
 
 
     } catch (error) {
