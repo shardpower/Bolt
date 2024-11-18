@@ -18,8 +18,8 @@ importers:
         specifier: https://github.com/MercuryWorkshop/scramjet/releases/download/latest/mercuryworkshop-scramjet-1.0.2-dev.tgz
         version: https://github.com/MercuryWorkshop/scramjet/releases/download/latest/mercuryworkshop-scramjet-1.0.2-dev.tgz
       '@rubynetwork/rammerhead':
-        specifier: ^1.3.5
-        version: 1.3.5(bufferutil@4.0.8)(utf-8-validate@6.0.5)
+        specifier: ^1.3.6
+        version: 1.3.6(bufferutil@4.0.8)(utf-8-validate@6.0.5)
       '@rubynetwork/rammerhead-browser':
         specifier: ^1.0.9
         version: 1.0.9
@@ -274,12 +274,12 @@ packages:
   '@rubynetwork/rammerhead-browser@1.0.9':
     resolution: {integrity: sha512-Vtg4HmV8zRMexyQNN3HnOK2qCql5s51lD747AINxENZAOKbow1IIj1U9jmAqvaZCklLTuhQhwS/8wxn6GLyptQ==}
 
-  '@rubynetwork/rammerhead@1.3.5':
-    resolution: {integrity: sha512-gN3HcK1snoq2jms3ZxoR5OUGiKw5O3xCTKp/tzuYftYNJXgwFwWcDL8CLrk/uFlvifkBSOzWz3jJVqHC409m3w==}
+  '@rubynetwork/rammerhead@1.3.6':
+    resolution: {integrity: sha512-d5Ius3X5NwzYX020BPUjHkaQI+pZwFwcOAGzTQDuElLjjPue5gHUsj1sR+WAu3QvTcGStQJRc9Oj5eqxDk1EjQ==}
     hasBin: true
 
-  '@rubynetwork/rh@1.2.74':
-    resolution: {integrity: sha512-qbVueaMHxSXF8dysQE3eL2Fj8x5L1cBMzk5G6iVokntQjYxCHcV+vWvZbykXspvPJjs4b5uYnZ+D/rMHmSVhrg==}
+  '@rubynetwork/rh@1.2.76':
+    resolution: {integrity: sha512-uGiTXD1h9zmI0rU5dgD+/3DkqwZ7TBBAxziFcAD1/vDyVEay4exp5MVlDp+06UoDs3RaphZ5bQKMVvs1hf1wJQ==}
 
   '@titaniumnetwork-dev/ultraviolet@3.2.10':
     resolution: {integrity: sha512-Sf0Leb+NMEwFA8EQxCLW/wJW6TNR/EITBPKHadiq4DNOEbgXJdmIW8PKmsNkyOvAIN6o2peE86S6qxQt6ft1Ew==}
@@ -1433,9 +1433,9 @@ snapshots:
 
   '@rubynetwork/rammerhead-browser@1.0.9': {}
 
-  '@rubynetwork/rammerhead@1.3.5(bufferutil@4.0.8)(utf-8-validate@6.0.5)':
+  '@rubynetwork/rammerhead@1.3.6(bufferutil@4.0.8)(utf-8-validate@6.0.5)':
     dependencies:
-      '@rubynetwork/rh': 1.2.74(bufferutil@4.0.8)(utf-8-validate@6.0.5)
+      '@rubynetwork/rh': 1.2.76(bufferutil@4.0.8)(utf-8-validate@6.0.5)
       commander: 12.1.0
       picocolors: 1.1.1
     transitivePeerDependencies:
@@ -1443,7 +1443,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@rubynetwork/rh@1.2.74(bufferutil@4.0.8)(utf-8-validate@6.0.5)':
+  '@rubynetwork/rh@1.2.76(bufferutil@4.0.8)(utf-8-validate@6.0.5)':
     dependencies:
       async-exit-hook: 2.0.1
       cookie: 0.7.2
