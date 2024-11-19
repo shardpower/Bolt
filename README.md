@@ -64,12 +64,13 @@
   
   ```bash
   npm i
+  pnpm i
   ```
   <br>
   then run
   
   ```bash
-  npm start
+  pnpm start
   ```
   
   You should have a local Bolt on <b>localhost:8080</b>!
